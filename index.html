@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="System Design: Zero to Hero — an architecture field manual for senior and lead engineers."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="System Design: Zero to Hero" />
+    <meta property="og:description" content="An architecture field manual for senior and lead software engineers." />
+    <meta property="og:image" content="og.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>System Design: Zero to Hero</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" id="skip-link" href="#lesson-content">Skip to lesson</a>
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Curriculum navigation">
+        <div class="brand-block">
+          <a class="brand" href="#/home" aria-label="System Design home">
+            <span class="brand-mark" aria-hidden="true">SD</span>
+            <span>
+              <strong>Systems</strong>
+              <small>Field Manual · 2026</small>
+            </span>
+          </a>
+          <button class="icon-button sidebar-close" id="sidebar-close" aria-label="Close navigation">×</button>
+        </div>
+
+        <section class="sidebar-progress" aria-labelledby="progress-title">
+          <div class="progress-heading">
+            <span id="progress-title">Learning progress</span>
+            <strong id="progress-percent">0%</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+          <p id="progress-copy">Start with the foundations, or jump to a design review.</p>
+        </section>
+
+        <nav class="curriculum-nav" id="curriculum-nav"></nav>
+
+        <div class="sidebar-footer">
+          <button class="sidebar-action" data-route="#/bookmarks">
+            <span aria-hidden="true">◇</span> Saved references <span class="nav-count" id="bookmark-count">0</span>
+          </button>
+          <button class="sidebar-action" data-route="#/practice">
+            <span aria-hidden="true">◎</span> Practice lab
+          </button>
+        </div>
+      </aside>
+
+      <button class="sidebar-scrim" id="sidebar-scrim" aria-label="Close navigation" tabindex="-1"></button>
+
+      <div class="workspace">
+        <header class="topbar">
+          <div class="topbar-leading">
+            <button class="icon-button menu-button" id="menu-button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+            <div class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb">System Design / Overview</div>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="search-trigger" id="search-trigger" aria-haspopup="dialog" aria-controls="search-dialog">
+              <span aria-hidden="true">⌕</span>
+              <span>Search the manual</span>
+              <kbd>⌘ K</kbd>
+            </button>
+            <button class="icon-button" id="bookmark-page" aria-label="Bookmark this page" title="Bookmark this page">◇</button>
+            <button class="icon-button" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">◐</button>
+          </div>
+        </header>
+
+        <main class="content" id="lesson-content" tabindex="-1">
+          <section class="loading-state">
+            <span class="eyebrow">Loading field manual</span>
+            <h1>Mapping the architecture landscape…</h1>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <dialog class="search-dialog" id="search-dialog">
+      <form class="search-shell" id="search-form">
+        <div class="search-input-row">
+          <span aria-hidden="true">⌕</span>
+          <label class="sr-only" for="search-input">Search lessons, case studies, and glossary</label>
+          <input id="search-input" type="search" autocomplete="off" placeholder="Search CAP, idempotency, inventory reservation…" />
+          <button class="key-button" type="button" id="search-close" aria-label="Close search">Esc</button>
+        </div>
+        <div class="search-filters" id="search-filters" aria-label="Search filters">
+          <button type="button" class="filter-chip active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-chip" data-filter="module" aria-pressed="false">Lessons</button>
+          <button type="button" class="filter-chip" data-filter="case" aria-pressed="false">Case studies</button>
+          <button type="button" class="filter-chip" data-filter="tradeoff" aria-pressed="false">Decisions</button>
+          <button type="button" class="filter-chip" data-filter="glossary" aria-pressed="false">Glossary</button>
+        </div>
+        <div class="search-results" id="search-results">
+          <div class="search-empty">
+            <span>⌘ K</span>
+            <p>Search across the complete curriculum.</p>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+      <div class="noscript">This learning platform needs JavaScript for navigation, search, diagrams, and local progress tracking.</div>
+    </noscript>
+
+    <script src="content/modules-foundations.js"></script>
+    <script src="content/modules-advanced.js"></script>
+    <script src="content/framework-tradeoffs.js"></script>
+    <script src="content/cases-ecommerce.js"></script>
+    <script src="content/cases-general.js"></script>
+    <script src="content/assessments.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
