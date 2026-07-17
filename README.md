@@ -2,6 +2,8 @@
 
 A local-first system design learning platform for senior and lead software engineers. The standalone application uses plain HTML, CSS, and JavaScript; it has no backend, account, database, build requirement, or remote runtime dependency.
 
+![System Design: Zero to Hero homepage](docs/homepage.jpg)
+
 ## Run locally
 
 ### Fastest option
